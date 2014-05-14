@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guess Number Game</title>
+    <link rel="stylesheet" type="text/css" href="css/guess_number.css"/>
+
+</head>
+<script src="js/jquery.min.js"></script>
+<script src="js/guess_number.js"></script>
+<body>
+    <div id="game_container">
+        <div id="answerMessageBox">Enter a number and press ok tu start !</div>
+        <input type="text" name="proposition" id="proposition"/>
+        <div class="button" id="validProposition" > OK </div>
+
+    </div>
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            function gameCallbackFunction(success){
+                alert('Congratulation, you found the good number')
+            }
+            var startSettings = {
+                value: 50,
+                numberOfTryAllowed : 5,
+                messageIdentifier : 'answerMessageBox',
+                texts: {
+                        tooBig :'Your proposition is too big',
+                        tooLow :'Your proposition is too low',
+                        exact  :'Congratulation, you found the good number',
+                        error  :'You need to enter  a number'
+                },
+                callbackFunction : gameCallbackFunction
+            };
+
+            $('#game_container').wGuessNumber(startSettings,'texts');
+        });
+
+
+    </script>
+</body>
+</html>

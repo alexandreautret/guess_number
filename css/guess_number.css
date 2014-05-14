@@ -1,0 +1,29 @@
+html, body {
+    margin: 0; padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+body{
+    background-color: #04859D;
+
+}
+
+#game_container{
+    margin: 0 auto;
+    width: 300px;
+    text-align: center;
+}
+
+.button {
+    padding: 5px;
+    border-radius: 15px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    background-color: #add8e6;
+    cursor: pointer;
+}
+
